@@ -65,9 +65,8 @@ class Morse
 
 				
 			@count2 = 0
-			@count3 = 0 
+			@count3 = 0
 			combinaciones
-
 		end
 
 		def combinaciones
@@ -79,12 +78,14 @@ class Morse
 					@morse = @morse[value.length..-1]
 					puts @morse
 					puts @count2 += 1
+					if @morse == "" && @count2 == @length_letras
+						count3 += 1
+					end
 					combinaciones
+					puts "$"
 				end
 			}
-			if @count2 == @length_letras
-				puts @count3 += 1
-			end
+			puts count3
 		end
 
 	end
