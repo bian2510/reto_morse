@@ -30,12 +30,6 @@ class Morse
 
 	def initialize()
 		@alfabeto = ALFABETO
-		@error = {
-			"error1" => "..--",
-			"error2" => ".-.-",
-			"error3" => "---.",
-			"error4" => "----"
-		}
 	end
 	
 	def start
@@ -63,15 +57,15 @@ class Morse
 			if morse[inicio..-1] != ""
 				if value == morse[inicio..inicio+value.length-1]
 					@count2 += 1
-					@coincidencia = value
+					coincidencia = value
 					inicio = inicio + value.length
 					if morse[inicio..-1] == "" && @count2 == length_letras
 						@count3 += 1
 					end
 					combinaciones(morse,length_letras,inicio)
-					@coincidencia = value
+					coincidencia = value
 					if inicio != 0
-						inicio = inicio - @coincidencia.length
+						inicio = inicio - coincidencia.length
 					else
 						inicio = 0
 					end
