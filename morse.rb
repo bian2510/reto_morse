@@ -44,9 +44,6 @@ class Morse
 
 		letras = input.split("")
 		count = 0
-		@inicio = 0	
-		@count2 = 0
-		@count3 = 0
 		@morse = ""
 
 		while count < @length_letras
@@ -55,6 +52,9 @@ class Morse
 		end
 
 		@length_morse = @morse.length
+		@inicio = 0	
+		@count2 = 0
+		@count3 = 0
 		combinaciones
 		puts @count3
 	end
